@@ -6,5 +6,10 @@ export default Factory.extend({
   },
   email() {
     return faker.internet.email();
+  },
+  afterCreate(customer, server) {
+    server.createList('premise', 2, {
+      customer
+    });
   }
 });

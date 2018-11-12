@@ -14,7 +14,11 @@
       <td>{{customer.id}}</td>
       <td>{{customer.name}}</td>
       <td>{{customer.email}}</td>
-      <td></td>
+      <td>
+        {{#link-to 'customer.premises' customer class="btn btn-primary"}}
+          View premises
+        {{/link-to}}
+      </td>
     </tr>
     {{/each}}
   </tbody>
